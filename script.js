@@ -1,25 +1,14 @@
-function table(){
-let array = []
-for (let i = 0; i <= 10; i++){
-    array[i]=[]
-    for(let j = 0; j <= 10; j++){
-        array[i].push([i]*[j])
-    }
-  }
-  return array
-}
-console.table(table())
-
-//bonus
-
 function tabelaMulti(array = 11){
     let tabela = []
-    for (let i = 0; i < array; i++){
-        tabela[i]=[]
-        for(let j = 0; j < array; j++){
-            tabela[i].push([i]*[j])
+    for (let coluna = 0; coluna < array; coluna++){
+        tabela[coluna]=[]
+        for(let linha = 0; linha < array; linha++){
+            tabela[coluna].push([coluna]*[linha])
         }
     }
     return tabela
 }
+//console.table(tabelaMulti())
 console.table(tabelaMulti())
+// Para mudar o valor: console.table(tabelaMulti(valor))
+// Exemplo: console.table(tabelaMulti(5))
